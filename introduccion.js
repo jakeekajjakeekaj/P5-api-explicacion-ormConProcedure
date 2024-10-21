@@ -44,3 +44,10 @@ DELIMITER ;
 // DECIMAL(10, 2) indica 10 dígitos, de los cuales pueden ser 2 dígitos decimales
 // BEGIN y END funcionan en conjunto para iniciar y terminar las consultas
 // // determina que ahí finalizará la ejecución SQL y seguido se escribe DELIMITER ; para determinar que se regresará a una consulta SQL "normal" al finalizar de nuevo con ;
+
+// *** OTRO DATO INTERESANTE ***
+// Si deseamos trabajar usando CORS, es muy importante saber que para trabajarlo con equipos ubicados en diferentes sitios del mundo por ejemplo, existen 2 maneras e hacer esto, con NGROK, de esta manera este se encarga de darnos una dirección, la cuál meteremos en nuestro CORS, y se encargará de hacer un direccionamiento a nuestro API de nuestro LOCALHOST, oara que así los demás accedan, es importante mencionar que debemos arrancar nosotros el servidor y solo funciona mientras que el servidor se esté ejecutando en nuestro localhost, así mismo solo es recomendable usa rne fase de desarrollo, y cualquier persona que cuente con el enlace podría tener acceso a la API
+
+// La otra opción es usando AWS, que entra el enfoque de server-less, de hecho podría venir valiendo la pena con el framework justamente, para trabajarlo en fase de desarrollo podríamos dejarlo como * para que esté abierto a todo mundo, o especificar el localhost con el puerto de cada persona (lo cual en equipos grandes puede llegar a complicar las cosas), pero se podría trabajar de esta manera y ya para la fase de desarrollo indicar el sitio específico de donde se tendrían estas solicitudes
+
+// Es importante mencionar que con cosas como autenticaciones, podemos mejorar nuestra seguridad por ejemplo
